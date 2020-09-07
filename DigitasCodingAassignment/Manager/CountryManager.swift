@@ -1,6 +1,6 @@
 //
-//  UserManager.swift
-//  MobileAxxessCodingAssignment
+//  CountryManager.swift
+//  DigitasCodingAssignment
 //
 //  Created by Shantaram K on 24/07/20.
 //  Copyright © 2020 Shantaram Kokate. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct UserManager {
+struct CountryManager {
 
       // The userRepository maintains a reference to an object of the User Data Repository class (As Of Now because it will change it requirement arise for core data).
     // It can be either lazy-loaded

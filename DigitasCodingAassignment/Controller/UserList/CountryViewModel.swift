@@ -1,6 +1,6 @@
 //
 //  CountryViewModel.swift
-//  MobileAxxessCodingAssignment
+//  DigitasCodingAssignment
 //
 //  Created by Shantaram K on 23/07/20.
 //  Copyright © 2020 Shantaram Kokate. All rights reserved.
@@ -22,7 +22,7 @@ class CountryViewModel: NSObject {
     
     var userList = [CountryInfoModel]()
     
-    private let manager = UserManager(with: UserDataRepository())
+    private let manager = CountryManager(with: UserDataRepository())
     
     var year: String {
         return ""

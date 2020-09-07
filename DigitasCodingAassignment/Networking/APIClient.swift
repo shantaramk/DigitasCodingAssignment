@@ -1,6 +1,6 @@
 //
 //  APIClient.swift
-//  MobileAxxessCodingAssignment
+//  DigitasCodingAssignment
 
 //
 //  Created by Shantaram K on 23/07/20.

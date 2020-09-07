@@ -53,7 +53,7 @@ class CountryInfoModel: Codable {
     }
 
     required init(from decoder: Decoder) throws {
-        var values = try decoder.container(keyedBy: CodingKeys.self)
+        let values = try decoder.container(keyedBy: CodingKeys.self)
         name = try values.decodeIfPresent(String.self, forKey: .name)
         topLevelDomain = try values.decodeIfPresent([String].self, forKey: .topLevelDomain)
         alpha2Code = try values.decodeIfPresent(String.self, forKey: .alpha2Code)

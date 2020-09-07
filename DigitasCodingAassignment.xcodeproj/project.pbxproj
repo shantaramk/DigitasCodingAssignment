@@ -12,7 +12,7 @@
 		4C6E057A25061BFE002DF645 /* DigitasCodingAassignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E057825061BFE002DF645 /* DigitasCodingAassignment.xcdatamodeld */; };
 		4C6E057C25061C14002DF645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6E057B25061C14002DF645 /* Assets.xcassets */; };
 		4C6E057F25061C14002DF645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6E057D25061C14002DF645 /* LaunchScreen.storyboard */; };
-		4C6E05A425061D02002DF645 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E058725061D01002DF645 /* UserManager.swift */; };
+		4C6E05A425061D02002DF645 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E058725061D01002DF645 /* CountryManager.swift */; };
 		4C6E05A525061D02002DF645 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E058925061D01002DF645 /* APIConstant.swift */; };
 		4C6E05A625061D02002DF645 /* LocalizedStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E058A25061D01002DF645 /* LocalizedStringConstants.swift */; };
 		4C6E05A725061D02002DF645 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E058C25061D01002DF645 /* UserCell.swift */; };
@@ -21,7 +21,7 @@
 		4C6E05AD25061D02002DF645 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E059725061D01002DF645 /* APIClient.swift */; };
 		4C6E05AE25061D02002DF645 /* UserProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E059825061D01002DF645 /* UserProxy.swift */; };
 		4C6E05AF25061D02002DF645 /* RMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E059A25061D01002DF645 /* RMUser.swift */; };
-		4C6E05B025061D02002DF645 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E059B25061D01002DF645 /* UserInfoModel.swift */; };
+		4C6E05B025061D02002DF645 /* CountryInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E059B25061D01002DF645 /* CountryInfoModel.swift */; };
 		4C6E05B125061D02002DF645 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E059E25061D01002DF645 /* UserRepository.swift */; };
 		4C6E05B225061D02002DF645 /* UserDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E05A125061D01002DF645 /* UserDataRepository.swift */; };
 		4C6E05B325061D02002DF645 /* PersistantStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6E05A225061D01002DF645 /* PersistantStorage.swift */; };
@@ -41,7 +41,7 @@
 		4C6E057B25061C14002DF645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C6E057E25061C14002DF645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C6E058025061C14002DF645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C6E058725061D01002DF645 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		4C6E058725061D01002DF645 /* CountryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
 		4C6E058925061D01002DF645 /* APIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		4C6E058A25061D01002DF645 /* LocalizedStringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringConstants.swift; sourceTree = "<group>"; };
 		4C6E058C25061D01002DF645 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		4C6E059725061D01002DF645 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		4C6E059825061D01002DF645 /* UserProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProxy.swift; sourceTree = "<group>"; };
 		4C6E059A25061D01002DF645 /* RMUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMUser.swift; sourceTree = "<group>"; };
-		4C6E059B25061D01002DF645 /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		4C6E059B25061D01002DF645 /* CountryInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryInfoModel.swift; sourceTree = "<group>"; };
 		4C6E059E25061D01002DF645 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		4C6E05A125061D01002DF645 /* UserDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataRepository.swift; sourceTree = "<group>"; };
 		4C6E05A225061D01002DF645 /* PersistantStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistantStorage.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		4C6E058625061D01002DF645 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				4C6E058725061D01002DF645 /* UserManager.swift */,
+				4C6E058725061D01002DF645 /* CountryManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4C6E059A25061D01002DF645 /* RMUser.swift */,
-				4C6E059B25061D01002DF645 /* UserInfoModel.swift */,
+				4C6E059B25061D01002DF645 /* CountryInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 				4C6E05B125061D02002DF645 /* UserRepository.swift in Sources */,
 				4C6E05AB25061D02002DF645 /* SKNavigationController.swift in Sources */,
 				4C6E05B325061D02002DF645 /* PersistantStorage.swift in Sources */,
-				4C6E05B025061D02002DF645 /* UserInfoModel.swift in Sources */,
+				4C6E05B025061D02002DF645 /* CountryInfoModel.swift in Sources */,
 				4C6E05B225061D02002DF645 /* UserDataRepository.swift in Sources */,
 				4C6E057A25061BFE002DF645 /* DigitasCodingAassignment.xcdatamodeld in Sources */,
 				4C6E05AF25061D02002DF645 /* RMUser.swift in Sources */,
@@ -325,7 +325,7 @@
 				4C6E05A525061D02002DF645 /* APIConstant.swift in Sources */,
 				4C6E05BC2506499C002DF645 /* CountryListViewController.swift in Sources */,
 				4C6E057025061BFE002DF645 /* AppDelegate.swift in Sources */,
-				4C6E05A425061D02002DF645 /* UserManager.swift in Sources */,
+				4C6E05A425061D02002DF645 /* CountryManager.swift in Sources */,
 				4C6E057225061BFE002DF645 /* SceneDelegate.swift in Sources */,
 				4C6E05AC25061D02002DF645 /* TableViewExtension.swift in Sources */,
 			);

@@ -1,6 +1,6 @@
 //
 //  RMUser.swift
-//  MobileAxxessCodingAssignment
+//  DigitasCodingAssignment
 //
 //  Created by Shantaram K on 24/07/20.
 //  Copyright © 2020 Shantaram Kokate. All rights reserved.

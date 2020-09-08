@@ -1,0 +1,12 @@
+//
+//  Production.xcconfig
+//  DigitasCodingAassignment
+//
+//  Created by Shantaram K on 07/09/20.
+//  Copyright © 2020 Shantaram Kokate. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+FS_BASE_URL = https:%%restcountries-v1.p.rapidapi.com/
+FS_API_REGION = Asia

@@ -48,10 +48,10 @@ class CountryListViewController: UIViewController, CountryListViewControllerProt
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+
         configureUI()
         
-        viewModel.userList { error, _ in
+        viewModel.countryList { error, _ in
             
             self.tableView.reloadData()
             
@@ -113,7 +113,7 @@ extension CountryListViewController: UITableViewDelegate {
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let countryInfo = self.viewModel.userList[indexPath.row]
+        let countryInfo = self.viewModel.countryList[indexPath.row]
         let object = CountryDetailViewController()
         object.countryInfo = countryInfo
         self.navigationController!.pushViewController(object, animated: true)
@@ -124,14 +124,14 @@ extension CountryListViewController: UITableViewDelegate {
 extension CountryListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.userList.count
+        return self.viewModel.countryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
         
-        cell.countryInfo = self.viewModel.userList[indexPath.row]
+        cell.countryInfo = self.viewModel.countryList[indexPath.row]
         
         cell.selectionStyle = .none
         

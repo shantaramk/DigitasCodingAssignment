@@ -28,7 +28,7 @@ class APIClient: NSObject, Requestable {
             "useQueryString": "true"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: route.path!)! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: route.url)! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10000.0)
         request.httpMethod = "GET"
@@ -67,4 +67,10 @@ class APIClient: NSObject, Requestable {
 struct APIConfiguration {
     
      var path: String?
+
+    var url: String {
+        let baseURL = EnvironmentConfiguration().configuration(Plist.baseURL)
+        print(baseURL)
+        return baseURL + path!
+    }
 }

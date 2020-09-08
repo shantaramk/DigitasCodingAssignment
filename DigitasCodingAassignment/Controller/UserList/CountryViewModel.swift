@@ -10,7 +10,7 @@ import UIKit
 
 protocol ViewInformationProtocol {
         
-    func userList(completion: @escaping(Bool, String) -> Void)
+    func countryList(completion: @escaping(Bool, String) -> Void)
     
 }
 
@@ -20,7 +20,7 @@ protocol UserViewProtocol: ViewInformationProtocol {
 
 class CountryViewModel: NSObject {
     
-    var userList = [CountryInfoModel]()
+    var countryList = [CountryInfoModel]()
     
     private let manager = CountryManager(with: UserDataRepository())
     
@@ -33,35 +33,40 @@ class CountryViewModel: NSObject {
 
 extension CountryViewModel: UserViewProtocol {
     
-    public func userList(completion: @escaping (Bool, String) -> Void) {
-        
-        let userList = manager.getAll() ?? []
-        
-        if userList.isEmpty {
-            
-            UserProxy().userList(APIConfiguration(path: APIBaseUrl.url + APIEndpoint.allCountryList),
-                               successCompletion: { (result) in
-                                
-                                self.initialzedUsersArray(result)
+    public func countryList(completion: @escaping (Bool, String) -> Void) {
 
-                                self.createUsersInfo(users: result)
-                                
-                                print(PersistantStorage.shared.dbPath)
-                                
-                                completion(true, "")
-                                
-                                
+        if ReachabilityManager.isConnectedToNetwork() {
+
+            print("Internet connection OK")
+
+            let regionName = EnvironmentConfiguration().configuration(Plist.region)
+
+            print(regionName)
+
+            CountryProxy().countryListByRegion(APIConfiguration(path: APIEndpoint.region + regionName),
+                                               successCompletion: { (result) in
+
+                                                self.initialzedUsersArray(result)
+
+                                                self.createUsersInfo(users: result)
+
+                                                print(PersistantStorage.shared.dbPath)
+
+                                                completion(true, "")
+
+
             }) { (error) in
 
                 print(error)
                 completion(true, "")
             }
         } else {
-            
-            self.initialzedUsersArray(manager.getAll() ?? [])
-            
-            completion(true, "")
 
+            print("Internet connection FAILED")
+
+            self.initialzedUsersArray(manager.getAll() ?? [])
+
+            completion(true, "")
         }
         
     }
@@ -80,7 +85,7 @@ fileprivate extension CountryViewModel {
     
     func initialzedUsersArray(_ users: [CountryInfoModel]) {
         
-        self.userList = users
+        self.countryList = users
         
     }
 }

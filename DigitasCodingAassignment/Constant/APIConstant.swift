@@ -20,10 +20,45 @@ struct APIBaseUrl {
 struct APIEndpoint {
     
     static let allCountryList = "all"
-    
+    static let region = "region/"
 }
 
 struct TenantId {
     
     static let axxessTech = "AxxessTech"
+}
+
+enum Plist {
+    case baseURL
+    case region
+    func value() -> String {
+        switch self {
+        case .baseURL:
+            return "base_url"
+        case .region:
+            return "api_region"
+        }
+    }
+}
+
+
+
+struct EnvironmentConfiguration {
+
+    func configuration(_ key: Plist) -> String {
+        if let infoDict = Bundle.main.infoDictionary {
+            switch key {
+            case .baseURL:
+                return self.baseUrlWithTenantId(infoDict[Plist.baseURL.value()] as? String ?? "")
+
+            case .region:
+                return infoDict[Plist.region.value()] as? String ?? ""
+            }
+        } else {
+            fatalError("Unable to locate plist file")
+        }
+    }
+    func baseUrlWithTenantId(_ baseUrl: String) -> String {
+        return baseUrl.replacingOccurrences(of: "%", with: "/") + "/"
+    }
 }

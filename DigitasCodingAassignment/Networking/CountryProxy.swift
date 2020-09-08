@@ -1,5 +1,5 @@
 //
-//  UserProxy.swift
+//  CountryProxy.swift
 //  DigitasCodingAssignment
 
 //
@@ -9,7 +9,7 @@
 
 import UIKit
 
-class UserProxy {
+class CountryProxy {
     
     // The Proxy maintains a reference to an object of the APIClient class.
     // It can be either lazy-loaded or passed to the Proxy by the client.
@@ -25,7 +25,7 @@ class UserProxy {
         return false
     }
     
-    func userList(_ apiConfiguration: APIConfiguration, successCompletion: @escaping ([CountryInfoModel]) -> Void, failureCompletion: @escaping (Error) -> Void) {
+    func countryList(_ apiConfiguration: APIConfiguration, successCompletion: @escaping ([CountryInfoModel]) -> Void, failureCompletion: @escaping (Error) -> Void) {
         
         if checkHasAccessControl(apiConfiguration) {
             
@@ -40,5 +40,19 @@ class UserProxy {
         }
 
     }
-    
+
+    func countryListByRegion(_ apiConfiguration: APIConfiguration, successCompletion: @escaping ([CountryInfoModel]) -> Void, failureCompletion: @escaping (Error) -> Void) {
+
+        if checkHasAccessControl(apiConfiguration) {
+
+            apiClient.performRequest(route: apiConfiguration, successCompletion: { (result) in
+
+                successCompletion(result)
+
+            }, failureCompletion: { (error) in
+
+                failureCompletion(error)
+            })
+        }
+    }
 }
